@@ -1,0 +1,594 @@
+﻿@model Test1.Models.ViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<button type="button" class="c-header__nav-toggle">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="c-header__nav-close l-close-btn"></span>
+</button>
+<!--==============================Content================================-->
+<div id="content" class="c-content" style="padding-bottom: 309px;">
+    <div class="c-content__wrap">
+        <div class="l-container">
+            <div class="c-content__agent-profile h-clearfix">
+                <div class="c-content__agent-overview l-col l-col-8">
+                    <div class="c-content__agent-card">
+                        <h1>@Model.profile.Name</h1>
+                        <div class="c-content__agent-profile-photo">
+                            <img src="~/Content/images//agent5.png" alt="">
+                        </div>
+                        <div class="c-content__rating c-content__rating--agent">
+                            <div class="c-content__rating-stars">
+                                <span class="c-content__rating-star c-content__rating-star--full"></span>
+                                <span class="c-content__rating-star c-content__rating-star--full"></span>
+                                <span class="c-content__rating-star c-content__rating-star--full"></span>
+                                <span class="c-content__rating-star c-content__rating-star--full"></span>
+                                <span class="c-content__rating-star c-content__rating-star--half-full"></span>
+                            </div>
+                            <div class="c-content__rating-info">
+                                <div class="c-content__rating-average">@Model.profile.Rating</div>
+                                <a href="http://fast-coding.com/house/agent-profile.html#" class="c-content__agent-review-count">@Model.profile.Review</a>
+                            </div>
+                        </div>
+                        <div class="c-content__skill-bars c-content__skill-bars--agent">
+                            <div class="c-content__skill-bar">
+                                <div class="c-content__skill-bar-title">Local knowledge</div>
+                                <div class="c-content__skill-bar-average">@Model.profile.LocalKnowledge</div>
+                                <div class="c-content__skill-bar-row--default">
+                                    <div class="c-content__skill-bar-row" style="width:90%;"></div>
+                                </div>
+                            </div>
+                            <div class="c-content__skill-bar">
+                                <div class="c-content__skill-bar-title">Process expertise</div>
+                                <div class="c-content__skill-bar-average">@Model.profile.ProcessExpertise</div>
+                                <div class="c-content__skill-bar-row--default">
+                                    <div class="c-content__skill-bar-row" style="width:84%;"></div>
+                                </div>
+                            </div>
+                            <div class="c-content__skill-bar">
+                                <div class="c-content__skill-bar-title">Responsiveness</div>
+                                <div class="c-content__skill-bar-average">@Model.profile.Responsiveness</div>
+                                <div class="c-content__skill-bar-row--default">
+                                    <div class="c-content__skill-bar-row" style="width:100%;"></div>
+                                </div>
+                            </div>
+                            <div class="c-content__skill-bar">
+                                <div class="c-content__skill-bar-title">Negotiation Skills</div>
+                                <div class="c-content__skill-bar-average">@Model.profile.Review</div>
+                                <div class="c-content__skill-bar-row--default">
+                                    <div class="c-content__skill-bar-row" style="width:82%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-content__agent-desc">
+                        <h4 class="l-border">About</h4>
+                        <p>
+                            @Model.profile.About
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="c-content__agent-form l-col l-col-4">
+                    <div class="l-box">
+                        <form class="l-form l-contact-agent-form">
+                            <div class="l-form__holder">
+                                <h5>Contact Melissa</h5>
+                                <div class="l-form__inner">
+                                    <div class="l-form-row h-clearfix">
+                                        <div class="l-form-group">
+                                            <input type="text" class="l-form-control" id="inputFirstName_ContactAgentForm" required="">
+                                            <label for="inputFirstName_ContactAgentForm" class="l-form-label">first name</label>
+                                            <span class="l-form-control-focus"></span>
+                                        </div>
+                                    </div>
+                                    <div class="l-form-row h-clearfix">
+                                        <div class="l-form-group">
+                                            <input type="text" class="l-form-control" id="inputLastName_ContactAgentForm" required="">
+                                            <label for="inputLastName_ContactAgentForm" class="l-form-label">last name</label>
+                                            <span class="l-form-control-focus"></span>
+                                        </div>
+                                    </div>
+                                    <div class="l-form-extra">
+                                        <div class="l-form-row h-clearfix">
+                                            <div class="l-form-group">
+                                                <input type="email" class="l-form-control" id="inputEmail_ContactAgentForm" required="">
+                                                <label for="inputEmail_ContactAgentForm" class="l-form-label">email</label>
+                                                <span class="l-form-control-focus"></span>
+                                            </div>
+                                        </div>
+                                        <div class="l-form-row h-clearfix">
+                                            <div class="l-form-group">
+                                                <input type="text" class="l-form-control" id="inputPhone_ContactAgentForm" required="">
+                                                <label for="inputPhone_ContactAgentForm" class="l-form-label">phone</label>
+                                                <span class="l-form-control-focus"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="l-form-row h-clearfix">
+                                        <div class="l-form-group l-form-group--textarea">
+                                            <textarea class="l-form-control" id="areaComment_ContactAgentForm" required=""></textarea>
+                                            <label for="areaComment_ContactAgentForm" class="l-form-label">comment</label>
+                                            <span class="l-form-control-focus"></span>
+                                        </div>
+                                    </div>
+                                    <div class="l-form-row l-form-row--submit l-row--center">
+                                        <button type="submit" class="l-btn l-btn-primary">Submit</button>
+                                        <div class="l-form__buttons h-clearfix">
+                                            <a href="http://fast-coding.com/house/agent-profile.html#" class="l-btn l-btn--action l-btn--gray">Call</a>
+                                            <a href="http://fast-coding.com/house/agent-profile.html#" class="l-btn l-btn--action l-btn--gray">Leave Review</a>
+                                        </div>
+                                        <div class="l-form-text">
+                                            <a href="http://fast-coding.com/house/agent-profile.html#">www.crosbyrealestate.com</a>
+                                        </div>
+                                        <ul class="l-list l-list--social c-content__agent-form-social">
+                                            <li>
+                                                <a href="http://fast-coding.com/house/agent-profile.html#" target="_blank">
+                                                    <span class="l-list--social__icon">
+                                                        <img src="~/Content/images//icon-twitter-agent.svg" alt="">
+                                                    </span>
+                                                    <span class="l-list--social__icon--hover">
+                                                        <img src="~/Content/images//icon-twitter-agent-dark.svg" alt="">
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://fast-coding.com/house/agent-profile.html#" target="_blank">
+                                                    <span class="l-list--social__icon">
+                                                        <img src="~/Content/images//icon-facebook-agent.svg" alt="">
+                                                    </span>
+                                                    <span class="l-list--social__icon--hover">
+                                                        <img src="~/Content/images//icon-facebook-agent-dark.svg" alt="">
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="http://fast-coding.com/house/agent-profile.html#" target="_blank">
+                                                    <span class="l-list--social__icon">
+                                                        <img src="~/Content/images//icon-linkedin-agent.svg" alt="">
+                                                    </span>
+                                                    <span class="l-list--social__icon--hover">
+                                                        <img src="~/Content/images//icon-linkedin-agent-dark.svg" alt="">
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="l-divider l-divider--big"></div>
+            <h3>Active Listings</h3>
+            <div class="c-content__property c-content__property--active">
+
+                @foreach (var estate in Model.arEstates)
+                {
+                    <div class="c-content__property-item">
+                        <a href="http://fast-coding.com/house/agent-profile.html#">
+                            <div class="c-content__property-main">
+                                <div class="c-content__property-image">
+                                    <img src="~/Content/images//home1.jpg" alt="">
+                                </div>
+                                <div class="c-content__property-price h-clearfix">
+                                    <div class="c-content__property-price-current">
+                                        $@estate.Price
+                                    </div>
+                                    <div class="c-content__property-price-changes c-content__property-price-changes--up">
+                                        <span class="value">@estate.Price1</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-content__property-desc">
+                                <div class="c-content__property-info h-clearfix">
+                                    <div class="c-content__property-address">
+                                        @estate.Address
+                                    </div>
+                                    <div class="c-content__property-photos">
+                                        <span>×</span> 12
+                                    </div>
+                                </div>
+                                <div class="c-content__property-features h-clearfix">
+                                    <div class="c-content__property-feature c-content__property-feature--beds">
+                                        @estate.Beds
+                                    </div>
+                                    <div class="c-content__property-feature c-content__property-feature--bath">
+                                        @estate.Bath
+                                    </div>
+                                    <div class="c-content__property-feature c-content__property-feature--sqft">
+                                        @estate.Soft
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="c-content__property-favourite"></div>
+                    </div>
+                }
+                
+                
+                
+            </div>
+            <div class="l-row l-row--center">
+                <a class="l-btn l-btn-more l-btn--blue l-btn-more--arrow-changeable" href="http://fast-coding.com/house/agent-profile.html#"><span class="h-hide-on-mobile">See </span>More</a>
+            </div>
+            <div class="l-divider l-divider--big"></div>
+            <h3>Past Sales</h3>
+            <div class="c-content__sales">
+                <div class="c-content__sales-row">
+                    <div class="c-content__sales-col c-content__sales-col--property">
+                        Property
+                    </div>
+                    <div class="c-content__sales-col c-content__sales-col--details">
+                        Details
+                    </div>
+                    <div class="c-content__sales-col c-content__sales-col--represented">
+                        Represented
+                    </div>
+                    <div class="c-content__sales-col c-content__sales-col--price">
+                        Price
+                    </div>
+                </div>
+
+                @foreach (var sale in Model.arSales)
+                {                
+                    <div class="c-content__sales-row">
+                        <div class="c-content__sales-col c-content__sales-col--property">
+                            <div class="c-content__sales-property-photo">
+                                <img src="~/Content/images//home5.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="c-content__sales-col c-content__sales-col--details">
+                            <span class="c-content__sales-price">@sale.Estate.Price</span>
+                            <span class="c-content__sales-location">@sale.Estate.Price1</span>
+                            <span class="c-content__sales-address">@sale.Estate.Address</span>
+                            <span class="c-content__sales-info">@sale.Estate.Beds bed, @sale.Estate.Bath bath, @sale.Estate.Soft sqft</span>
+                            <span class="c-content__sales-date">Sold date: @sale.Date</span>
+                        </div>
+                        <div class="c-content__sales-col c-content__sales-col--represented">
+                            Seller
+                        </div>
+                        <div class="c-content__sales-col c-content__sales-col--price">
+                            $@sale.Estate.Price
+                        </div>
+                    </div>
+                }
+
+
+
+            </div>
+            <ul class="l-list l-list--pagination h-hide-on-mobile">
+                <li class="l-list__pagination-control l-list__pagination-control--prev l-list__pagination-control--disabled">
+                    <a href="http://fast-coding.com/house/agent-profile.html#"></a>
+                </li>
+                <li class="l-list__pagination-pages">
+                    <span class="l-list-pagination__current">1</span>
+                    <span class="l-list-pagination__pages-count">32</span>
+                </li>
+                <li class="l-list__pagination-control l-list__pagination-control--next">
+                    <a href="http://fast-coding.com/house/agent-profile.html#"></a>
+                </li>
+            </ul>
+            <div class="l-row l-row--center h-hide-on-desktop">
+                <a class="l-btn l-btn-more l-btn--blue l-btn-more--arrow-down" href="http://fast-coding.com/house/agent-profile.html#"><span class="h-hide-on-mobile">See </span>More</a>
+            </div>
+            <div class="l-divider l-divider--big"></div>
+            <h3>Ratings &amp; Reviews</h3>
+            <div class="c-content__filter c-content__filter--reviews h-clearfix">
+                <div class="l-col l-col-4 l-col-xs-6">
+                    <div class="jq-selectbox jqselect l-form-control l-form-select l-form-elem-custom" id="reviewType_ReviewFilter-styler">
+                        <select class="l-form-control l-form-select l-form-elem-custom" id="reviewType_ReviewFilter">
+                            <option>All reviews (16)</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select><div class="jq-selectbox__select"><div class="jq-selectbox__select-text">All reviews (16)</div><div class="jq-selectbox__trigger"><div class="jq-selectbox__trigger-arrow"></div></div></div><div class="jq-selectbox__dropdown" style="display: none;"><ul><li class="selected sel" style="">All reviews (16)</li><li style="">1</li><li style="">2</li><li style="">3</li><li style="">4</li><li style="">5</li></ul></div>
+                    </div>
+                </div>
+                <div class="l-col l-col-4 l-col-xs-6">
+                    <div class="jq-selectbox jqselect l-form-control l-form-select l-form-elem-custom" id="reviewOrder_ReviewFilter-styler">
+                        <select class="l-form-control l-form-select l-form-elem-custom" id="reviewOrder_ReviewFilter">
+                            <option>Newest first</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select><div class="jq-selectbox__select"><div class="jq-selectbox__select-text">Newest first</div><div class="jq-selectbox__trigger"><div class="jq-selectbox__trigger-arrow"></div></div></div><div class="jq-selectbox__dropdown" style="display: none;"><ul><li class="selected sel" style="">Newest first</li><li style="">1</li><li style="">2</li><li style="">3</li><li style="">4</li><li style="">5</li></ul></div>
+                    </div>
+                </div>
+                <div class="l-col l-col-4 h-hide-on-mobile">
+                    <button type="button" class="l-btn l-btn--action l-btn--blue">Write a Review</button>
+                </div>
+            </div>
+            <div class="c-content__reviews">
+                
+                @foreach (var review in Model.arReviews)
+                {
+                    <div class="c-content__review-item">
+                        <div class="c-content__review-summary">
+                            <div class="c-content__review-info">
+                                <div class="c-content__review-date">
+                                    @review.Date
+                                </div>
+                                <div class="c-content__review-meta h-hide-on-desktop">
+                                    <div class="c-content__review-author">
+                                        Reviewed by: @review.Name
+                                    </div>
+                                </div>
+                                <div class="c-content__rating c-content__rating--review">
+                                    <div class="c-content__rating-stars">
+                                        <span class="c-content__rating-star c-content__rating-star--full"></span>
+                                        <span class="c-content__rating-star c-content__rating-star--full"></span>
+                                        <span class="c-content__rating-star c-content__rating-star--full"></span>
+                                        <span class="c-content__rating-star c-content__rating-star--full"></span>
+                                        <span class="c-content__rating-star c-content__rating-star--half-full"></span>
+                                    </div>
+                                    <div class="c-content__rating-info">
+                                        <div class="c-content__review-average">@review.Rating</div>
+                                    </div>
+                                </div>
+                                <div class="c-content__review-meta h-hide-on-mobile">
+                                    <div class="c-content__review-author">
+                                        Reviewed by: @review.Name
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-content__skill-bars c-content__skill-bars--review">
+                                <div class="c-content__skill-bar">
+                                    <div class="c-content__skill-bar-title">Local knowledge</div>
+                                    <div class="c-content__skill-bar-average">@review.LocalKnowledge</div>
+                                    <div class="c-content__skill-bar-row--default">
+                                        <div class="c-content__skill-bar-row" style="width:90%;"></div>
+                                    </div>
+                                </div>
+                                <div class="c-content__skill-bar">
+                                    <div class="c-content__skill-bar-title">Process expertise</div>
+                                    <div class="c-content__skill-bar-average">@review.ProcessExpertise</div>
+                                    <div class="c-content__skill-bar-row--default">
+                                        <div class="c-content__skill-bar-row" style="width:84%;"></div>
+                                    </div>
+                                </div>
+                                <div class="c-content__skill-bar">
+                                    <div class="c-content__skill-bar-title">Responsiveness</div>
+                                    <div class="c-content__skill-bar-average">@review.Responsiveness</div>
+                                    <div class="c-content__skill-bar-row--default">
+                                        <div class="c-content__skill-bar-row" style="width:100%;"></div>
+                                    </div>
+                                </div>
+                                <div class="c-content__skill-bar">
+                                    <div class="c-content__skill-bar-title">Negotiation Skills</div>
+                                    <div class="c-content__skill-bar-average">@review.NegotitationSkills</div>
+                                    <div class="c-content__skill-bar-row--default">
+                                        <div class="c-content__skill-bar-row" style="width:82%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="c-content__review-content">
+                            @review.Note
+                        </div>
+                    </div>
+                }
+                
+            </div>
+            <div class="c-content__copyright c-content__copyright--zillow">
+                <div class="c-content__logo-copyright">
+                    <a href="http://fast-coding.com/house/agent-profile.html#">Zillow</a>
+                </div>
+                <p>
+                    © Zillow, Inc., 2006-2016. Use is subject to <a href="http://fast-coding.com/house/agent-profile.html#">Terms of Use</a>
+                </p>
+                <p>
+                    <a href="http://fast-coding.com/house/agent-profile.html#">What's a Zestimate?</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--==============================Footer=================================-->
+<footer id="footer" class="c-footer">
+    <div class="c-footer__equal-housing-logo"></div>
+    <div class="l-row l-row--footer-logo">
+        <div class="l-container">
+            <div class="c-footer__logo">
+                <a href="http://fast-coding.com/house/index.html">Homes.Forsale</a>
+            </div>
+        </div>
+    </div>
+    <div class="l-row l-row--copyright">
+        <div class="l-container">
+            <ul class="l-list l-list--social c-footer__social">
+                <li>
+                    <a href="http://fast-coding.com/house/agent-profile.html#" target="_blank">
+                        <span class="l-list--social__icon">
+                            <img src="~/Content/images//icon-instagram.svg" alt="">
+                        </span>
+                        <span class="l-list--social__icon--hover">
+                            <img src="~/Content/images//icon-instagram-white.svg" alt="">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://fast-coding.com/house/agent-profile.html#" target="_blank">
+                        <span class="l-list--social__icon">
+                            <img src="~/Content/images//icon-twitter.svg" alt="">
+                        </span>
+                        <span class="l-list--social__icon--hover">
+                            <img src="~/Content/images//icon-twitter-white.svg" alt="">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://fast-coding.com/house/agent-profile.html#" target="_blank">
+                        <span class="l-list--social__icon">
+                            <img src="~/Content/images//icon-facebook.svg" alt="">
+                        </span>
+                        <span class="l-list--social__icon--hover">
+                            <img src="~/Content/images//icon-facebook-white.svg" alt="">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://fast-coding.com/house/agent-profile.html#" target="_blank">
+                        <span class="l-list--social__icon">
+                            <img src="~/Content/images//icon-linkedin.svg" alt="">
+                        </span>
+                        <span class="l-list--social__icon--hover">
+                            <img src="~/Content/images//icon-linkedin-white.svg" alt="">
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://fast-coding.com/house/agent-profile.html#" target="_blank">
+                        <span class="l-list--social__icon">
+                            <img src="~/Content/images//icon-youtube.svg" alt="">
+                        </span>
+                        <span class="l-list--social__icon--hover">
+                            <img src="~/Content/images//icon-youtube-white.svg" alt="">
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="c-footer__copyright">
+                <p>
+                    © Copyright 2017, all rights are reserved. Real Estate Pros, LLC
+                </p>
+                <p>
+                    Updated January 2016: By searching, you agree to the <a href="http://fast-coding.com/house/agent-profile.html#">Terms of Use</a>, <a href="http://fast-coding.com/house/agent-profile.html#">Privacy Policy</a> and <a href="http://fast-coding.com/house/agent-profile.html#">End-User License Agreement.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--======================== Sticky Footer ======================================-->
+<footer id="footer" class="c-footer c-footer--mobile">
+    <div class="c-footer__links">
+        <a class="l-link l-link--action l-link--call" href="http://fast-coding.com/house/agent-profile.html#"><span>Call</span></a>
+        <a class="l-link l-link--action l-link--contact" href="mailto:email@goes.here"><span>Contact</span></a>
+        <a class="l-link l-link--action l-link--review" href="http://fast-coding.com/house/agent-profile.html#"><span>Leave Review</span></a>
+    </div>
+</footer>
+<!--======================== Mobile Navigation ==================================-->
+<div class="c-mobile-wrap">
+    <div class="c-mobile-wrap__logo">
+        <a href="http://fast-coding.com/house/index.html">
+            <span class="c-mobile-wrap__logo-icon"></span>
+        </a>
+    </div>
+    <div class="c-mobile-wrap__nav">
+        <ul>
+            <li class="has-dropdown form-toggle">
+                <span class="has-dropdown__title">My account</span>
+                <ul class="l-dropdown--mobile">
+                    <li class="notices">
+                        <a href="http://fast-coding.com/house/agent-profile.html#"><span class="c-header__user-notices c-header__user--has-notices">1</span> Notices</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Account Settings</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Saved Searches</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Viewed Homes</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Favorited Homes</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Log Out</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="has-dropdown">
+                <span class="has-dropdown__title">Buy</span>
+                <ul class="l-dropdown--mobile">
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">All Homes</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">New Construction</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Forclosures</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Land</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Recently Sold</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="http://fast-coding.com/house/agent-profile.html#">Sell</a>
+            </li>
+            <li>
+                <a href="http://fast-coding.com/house/agent-profile.html#">Mortgage</a>
+            </li>
+            <li class="has-dropdown">
+                <span class="has-dropdown__title">Agents</span>
+                <ul class="l-dropdown--mobile">
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Looking for an Agent</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Advertising Solutions</a>
+                    </li>
+                    <li>
+                        <a href="http://fast-coding.com/house/agent-profile.html#">Create Agent Profile</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--======================== Mobile Forms ================================-->
+<div class="c-mobile-form-wrap">
+    <span class="c-mobile-form__close l-close-btn"></span>
+    <div class="c-mobile-form-wrap__inner">
+        <form class="l-form l-login-form l-login-form--mobile">
+            <div class="l-form__holder">
+                <h3>Sign in</h3>
+                <div class="l-form__inner">
+                    <div class="l-form-row">
+                        <div class="l-form-group">
+                            <input type="email" class="l-form-control" id="inputEmail_SignInFormMobile" required="">
+                            <label for="inputEmail_SignInFormMobile" class="l-form-label">email</label>
+                            <span class="l-form-control-focus"></span>
+                        </div>
+                    </div>
+                    <div class="l-form-row">
+                        <div class="l-form-group">
+                            <input type="password" class="l-form-control" id="inputPassword_SignInFormMobile" required="">
+                            <label for="inputPassword_SignInFormMobile" class="l-form-label">password</label>
+                            <span class="l-form-control-focus"></span>
+                            <a href="http://fast-coding.com/house/agent-profile.html#" class="l-form-link">Forgot Password?</a>
+                        </div>
+                    </div>
+                    <div class="l-form-row l-form-row--submit l-row--center">
+                        <button type="submit" class="l-btn l-btn-primary">Sign in</button>
+                        <div class="l-form-text">
+                            <a href="http://fast-coding.com/house/agent-profile.html#" class="l-form-link">Create an Account</a>
+                        </div>
+                    </div>
+                    <div class="l-form-row l-form-row--login-social">
+                        <div class="l-divider l-divider--form l-divider--light"><span>or</span></div>
+                        <div class="l-form-buttons">
+                            <button type="button" class="l-btn l-btn-login l-btn-login--facebook">Sign in with Facebook</button>
+                            <button type="button" class="l-btn l-btn-login l-btn-login--google">Sign in with Google</button>
+                            <button type="button" class="l-btn l-btn-login l-btn-login--microsoft">Sign in with Microsoft</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
